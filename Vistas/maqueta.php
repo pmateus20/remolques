@@ -20,6 +20,7 @@
  				<li> <a href="index.php?p=cliente/listar">Listar Clientes</a></li>
  				<li> <a href="index.php?p=factura/crear">Facturar</a></li>
  				<li> <a href="index.php?p=ordenServicio/crear">Nueva Orden de Servicio</a></li>
+ 				<li> <a href="index.php?p=proveedor/crear">Nuevo Proveedor</a></li>
  			</ul>
 		</div>
 		<div class="col-md-10">
