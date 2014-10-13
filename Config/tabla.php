@@ -15,7 +15,7 @@ class tabla {
 	$cam=explode(",", $campos);
 
 
-	echo "<table>";
+	echo "<table class='table table-striped'>";
 
 	echo "<tr>";
 

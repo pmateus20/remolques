@@ -9,7 +9,8 @@ require_once("Config/vista.php");
 require_once("Config/modelo.php");
 
 //Controladores
-require_once("Controladores/principalControlador.php");
+//require_once("Controladores/principalControlador.php");
+
 
 //Vistas
 

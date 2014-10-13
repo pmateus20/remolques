@@ -27,6 +27,7 @@
 					}
 				}
 			}
+			require_once("Controladores/".$controlador.".php");
 			$clase=new $controlador();
 			$clase->$metodo($valor);
 		}
