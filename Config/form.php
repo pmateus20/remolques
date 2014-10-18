@@ -33,6 +33,20 @@ class form{
 			echo "</select>";
 		}
 
+		function addArea($filas,$nombre){
+			echo "<textarea rows='$filas' name='$nombre' class='form-control'>";
+			echo "</textarea>";
+		}
+
+		function addBoton($nombre){
+			echo "<button type='button'>".$nombre."</button>";
+		}
+
+		static function addHidden($nombre,$valor){
+			echo "<input type='hidden' name='$nombre' value='$valor'>";
+		}
+
+
 		function addSubmit($nombre){
 			echo "<input class='btn btn-default' type='submit' value='".$nombre."' name='".$nombre."'>";
 		}
