@@ -25,6 +25,7 @@
  				<li> <a href="index.php?p=empleado/crear">Nuevo Empleado</a></li>
  				<li> <a href="index.php?p=empleado/listar">Listar Empleado</a></li>
  				<li> <a href="index.php?p=ordenServicio/nueva">Nueva Orden de Servicio</a></li>
+ 				<li> <a href="index.php?p=factura/nueva">Nueva Factura</a></li>
  			</ul>
 		</div>
 		<div class="col-md-10">

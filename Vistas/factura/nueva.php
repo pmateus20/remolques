@@ -1,23 +1,17 @@
-<h3>Nueva Orden de Servicio</h3>
-
 <?php 
 
 $f=new form();
 
-$f->iniciarForm("POST","ordenServicio/nueva","ordenServicio");
+$f->iniciarForm("POST","factura/nueva","factura");
 
 $f->addLabel("Fecha");
 $f->addTextbox("fecha");
-$f->addLabel("Numero de Servicio Externo");
-$f->addTextbox("numeroServicioExterno");
+$f->addLabel("Punto de Venta");
+$f->addTextbox("ptoVenta");
+$f->addLabel("Numero");
+$f->addTextbox("numero");
 $f->addLabel("Cliente");
 $f->addTextbox("cliente");
-$f->addLabel("Titular");
-$f->addTextbox("titular");
-$f->addLabel("Dominio");
-$f->addTextbox("dominio");
-$f->addLabel("Descripcion");
-$f->addArea("3","descripcion");	
 $f->addBoton("Aregrar Linea");
 
 $datos=array(
@@ -37,6 +31,10 @@ $f->addHidden("codigo","2");
 $f->addHidden("cantidad","1");
 $f->addHidden("importe","80");
 
+$f->addLabel("Subtotal");
+$f->addTextbox("subtotal");
+$f->addLabel("IVA");
+$f->addTextbox("iva");
 $f->addLabel("Total");
 $f->addTextbox("total");
 
@@ -44,6 +42,25 @@ $f->addSubmit("Guardar");
 
 
 $f->finForm();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
