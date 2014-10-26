@@ -3,6 +3,8 @@
 <head>
 	<title>Maqueta</title>
 	<link rel="stylesheet" href="Extenciones/bootstrap/css/bootstrap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -26,6 +28,7 @@
  				<li> <a href="index.php?p=empleado/listar">Listar Empleado</a></li>
  				<li> <a href="index.php?p=ordenServicio/nueva">Nueva Orden de Servicio</a></li>
  				<li> <a href="index.php?p=factura/nueva">Nueva Factura</a></li>
+ 				<li> <a href="index.php?p=factura/facturarOrdenes">Facturar Ordenes</a></li>
  			</ul>
 		</div>
 		<div class="col-md-10">
@@ -40,6 +43,8 @@
 </div>
 	
 </div>
+
+
 </body>
 
 </html>

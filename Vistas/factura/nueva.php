@@ -13,6 +13,7 @@ $f->addTextbox("numero");
 $f->addLabel("Cliente");
 $f->addTextbox("cliente");
 $f->addBoton("Aregrar Linea");
+echo "<a class='btn btn-default' data-toggle='modal' data-target='#buscarServicio'>Buscar</a>";
 
 $datos=array(
 	array("Codigo"=>"1","Descripcion"=>"Km Recorridos Asflato","Cantidad"=>"200","Importe"=>"800"),
@@ -44,28 +45,9 @@ $f->addSubmit("Guardar");
 $f->finForm();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+include "Vistas/factura/buscarServicio.php";
 
  ?>
+
+
+
