@@ -11,8 +11,13 @@ $r=array(
 	array("id"=>"4","fecha"=>"22/10/14","importe"=>"198")
 	);
 
- ?>
+ 
 
+ $f->iniciarForm("post","index.php?p=factura/facturarOrdenes","facturarOrdenes");
+
+
+
+?>
  <table class='table table-striped'>
  	<tr>
  		<th>Fecha</th>
@@ -20,7 +25,8 @@ $r=array(
  		<th>Importe</th>
  		<th></th>
  	</tr>
- 	<?php foreach ($r as $value) {
+ 	<?php 
+ 		foreach ($r as $value) {
 		echo "<tr>";
 			foreach ($value as $dato) {
 				echo "<td>".$dato."</td>";
@@ -29,8 +35,18 @@ $r=array(
 			$f->addCheckbox($value["id"],"orden".$value["id"]);
 			echo "</td>";
 		echo "</tr>";
-	} ?>
+		}
+		
+		$f->addHidden("cantidad",count($r));
+	?>
 
  </table>
 
- <?php $f->addSubmit("Facturar"); ?>
+ <?php 
+
+ $f->addSubmit("Facturar"); 
+
+ $f->finForm();
+
+
+ ?>

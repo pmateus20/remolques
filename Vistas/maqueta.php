@@ -29,6 +29,10 @@
  				<li> <a href="index.php?p=ordenServicio/nueva">Nueva Orden de Servicio</a></li>
  				<li> <a href="index.php?p=factura/nueva">Nueva Factura</a></li>
  				<li> <a href="index.php?p=factura/facturarOrdenes">Facturar Ordenes</a></li>
+ 				<li> <a href="index.php?p=facturaCompra/nueva">Nueva Factura de Compra</a></li>
+ 				<li> <a href="index.php?p=listaPrecio/cargar">Cargar Lista de Precios</a></li>
+ 				<li> <a href="index.php?p=reciboSueldo/nuevo">Nuevo Recibo de Sueldo</a></li>
+
  			</ul>
 		</div>
 		<div class="col-md-10">

@@ -8,7 +8,11 @@ class facturaControlador extends controlador{
 	}
 
 	function facturarOrdenes(){
-		$this->vista->render("factura/facturarOrdenes");
+		if(!isset($_POST["Facturar"])){
+			$this->vista->render("factura/facturarOrdenes");
+		}else{
+			$this->vista->render("factura/nueva");		
+		}
 	}
 }
 
