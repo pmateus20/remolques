@@ -24,7 +24,12 @@
  				<li> <a href="index.php?p=proveedor/listar">Listar Proveedor</a></li>
  				<li> <a href="index.php?p=empleado/crear">Nuevo Empleado</a></li>
  				<li> <a href="index.php?p=empleado/listar">Listar Empleado</a></li>
+<<<<<<< HEAD
  				<li> <a href="index.php?p=grupoFamiliar/crear">Nuevo Grupo Familiar</a></li>
+=======
+ 				<li> <a href="index.php?p=ordenServicio/nueva">Nueva Orden de Servicio</a></li>
+ 				<li> <a href="index.php?p=factura/nueva">Nueva Factura</a></li>
+>>>>>>> 1ab548dbd799691684e3ed29aa7169633cec8827
  			</ul>
 		</div>
 		<div class="col-md-10">
