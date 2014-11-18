@@ -33,13 +33,17 @@ class form{
 			echo "</select>";
 		}
 
+		function addCheckbox($id,$nombre){
+			echo "<input type='checkbox' name='$nombre' value='$id'>";
+		}
+
 		function addArea($filas,$nombre){
 			echo "<textarea rows='$filas' name='$nombre' class='form-control'>";
 			echo "</textarea>";
 		}
 
 		function addBoton($nombre){
-			echo "<button type='button'>".$nombre."</button>";
+			echo "<button class='btn btn-default'>".$nombre."</button>";
 		}
 
 		static function addHidden($nombre,$valor){

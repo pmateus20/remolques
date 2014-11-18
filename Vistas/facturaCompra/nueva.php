@@ -2,7 +2,7 @@
 
 $f=new form();
 
-$f->iniciarForm("POST","factura/nueva","factura");
+$f->iniciarForm("POST","facturaCompra/nueva","facturaCompra");
 
 $f->addLabel("Fecha");
 $f->addTextbox("fecha");
@@ -10,10 +10,8 @@ $f->addLabel("Punto de Venta");
 $f->addTextbox("ptoVenta");
 $f->addLabel("Numero");
 $f->addTextbox("numero");
-$f->addLabel("Cliente");
-$f->addTextbox("cliente");
-echo "<a class='btn btn-default' data-toggle='modal' data-target='#buscarServicio'>Buscar</a>";
-
+$f->addLabel("Proveedor");
+$f->addTextbox("proveedor");
 //lineas
 
 echo "<table class='table table-striped'>";
@@ -51,9 +49,5 @@ $f->addSubmit("Guardar");
 $f->finForm();
 
 
-include "Vistas/factura/buscarServicio.php";
 
  ?>
-
-
-

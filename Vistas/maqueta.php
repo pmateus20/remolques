@@ -3,6 +3,8 @@
 <head>
 	<title>Maqueta</title>
 	<link rel="stylesheet" href="Extenciones/bootstrap/css/bootstrap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -24,12 +26,22 @@
  				<li> <a href="index.php?p=proveedor/listar">Listar Proveedor</a></li>
  				<li> <a href="index.php?p=empleado/crear">Nuevo Empleado</a></li>
  				<li> <a href="index.php?p=empleado/listar">Listar Empleado</a></li>
+ 				<li> <a href="index.php?p=articulo/crear">Nuevo Articulo</a></li>
+ 				<li> <a href="index.php?p=articulo/listar">Listar Articulo</a></li>
 <<<<<<< HEAD
  				<li> <a href="index.php?p=grupoFamiliar/crear">Nuevo Grupo Familiar</a></li>
 =======
  				<li> <a href="index.php?p=ordenServicio/nueva">Nueva Orden de Servicio</a></li>
  				<li> <a href="index.php?p=factura/nueva">Nueva Factura</a></li>
+<<<<<<< HEAD
 >>>>>>> 1ab548dbd799691684e3ed29aa7169633cec8827
+=======
+ 				<li> <a href="index.php?p=factura/facturarOrdenes">Facturar Ordenes</a></li>
+ 				<li> <a href="index.php?p=facturaCompra/nueva">Nueva Factura de Compra</a></li>
+ 				<li> <a href="index.php?p=listaPrecio/cargar">Cargar Lista de Precios</a></li>
+ 				<li> <a href="index.php?p=reciboSueldo/nuevo">Nuevo Recibo de Sueldo</a></li>
+
+>>>>>>> 1575ec17624959b15c824925138e3d5e6e963de9
  			</ul>
 		</div>
 		<div class="col-md-10">
@@ -44,6 +56,8 @@
 </div>
 	
 </div>
+
+
 </body>
 
 </html>
