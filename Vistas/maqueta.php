@@ -28,6 +28,13 @@
  				<li> <a href="index.php?p=empleado/listar">Listar Empleado</a></li>
  				<li> <a href="index.php?p=articulo/crear">Nuevo Articulo</a></li>
  				<li> <a href="index.php?p=articulo/listar">Listar Articulo</a></li>
+ 				<li> <a href="index.php?p=categoria/crear">Nueva Categoria</a></li>
+ 				<li> <a href="index.php?p=categoria/listar">Listar Categoria</a></li>
+ 				<li> <a href="index.php?p=servicio/crear">Nuevo Servicio</a></li>
+ 				<li> <a href="index.php?p=servicio/listar">Listar Servicio</a></li>
+ 				<li> <a href="index.php?p=concepto/crear">Nuevo Concepto</a></li>
+ 				<li> <a href="index.php?p=concepto/listar">Listar Concepto</a></li>
+
 <<<<<<< HEAD
  				<li> <a href="index.php?p=grupoFamiliar/crear">Nuevo Grupo Familiar</a></li>
 =======
