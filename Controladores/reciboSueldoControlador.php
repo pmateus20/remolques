@@ -8,6 +8,23 @@ class reciboSueldoControlador extends Controlador{
 	}
 
 
+
+	//start get and set
+	function getfecha(){
+		return this->fecha;
+	}
+	function setfecha($id){
+		this->fecha=$id;
+	}
+
+	function getimporte(){
+		return this->importe;
+	}
+	function setimporte($id){
+		this->importe=$id;
+	}
+
+
 }
 
 
