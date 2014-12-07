@@ -34,21 +34,14 @@
  				<li> <a href="index.php?p=servicio/listar">Listar Servicio</a></li>
  				<li> <a href="index.php?p=concepto/crear">Nuevo Concepto</a></li>
  				<li> <a href="index.php?p=concepto/listar">Listar Concepto</a></li>
-
-<<<<<<< HEAD
  				<li> <a href="index.php?p=grupoFamiliar/crear">Nuevo Grupo Familiar</a></li>
-=======
  				<li> <a href="index.php?p=ordenServicio/nueva">Nueva Orden de Servicio</a></li>
  				<li> <a href="index.php?p=factura/nueva">Nueva Factura</a></li>
-<<<<<<< HEAD
->>>>>>> 1ab548dbd799691684e3ed29aa7169633cec8827
-=======
  				<li> <a href="index.php?p=factura/facturarOrdenes">Facturar Ordenes</a></li>
  				<li> <a href="index.php?p=facturaCompra/nueva">Nueva Factura de Compra</a></li>
  				<li> <a href="index.php?p=listaPrecio/cargar">Cargar Lista de Precios</a></li>
  				<li> <a href="index.php?p=reciboSueldo/nuevo">Nuevo Recibo de Sueldo</a></li>
 
->>>>>>> 1575ec17624959b15c824925138e3d5e6e963de9
  			</ul>
 		</div>
 		<div class="col-md-10">

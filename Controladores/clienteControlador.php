@@ -15,15 +15,18 @@ class clienteControlador extends controlador{
 
 	//get y set
 	function getapellidoNombre(){
-		return this->apellidoNombre;
+		return $this->apellidoNombre;
 	}
 
 	function setapellidoNombre($id){
-		this->apellidoNombre=$id;
+		$this->apellidoNombre=$id;
 	}
 
 
 	//fin get y set
+
+
+	
 
 
 }

@@ -4,7 +4,7 @@
 $f=new form();
 
 
-$f->iniciarForm("post","cliente/crear","nuevoCliente");
+$f->iniciarForm("post","index.php?p=cliente/guardar","nuevoCliente");
 $f->addLabel("Apellido y Nombre o Razon Social");
 $f->addTextbox("nombre");
 $f->addLabel("CUIT");

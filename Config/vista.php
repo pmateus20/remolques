@@ -11,7 +11,7 @@ class vista {
 	function getMaqueta(){
 		return $this->maqueta;
 	}
-	function render($vista){
+	function render($vista, $array=null){
 		$this->contenido="Vistas/".$vista.".php";
 		include $this->getMaqueta();
 
