@@ -1,5 +1,9 @@
 <?php 
 class servicioControlador extends controlador{
+	private $descripcion;
+
+
+
 	function crear(){
 		$this->vista->render("servicio/crear");
 	}
@@ -25,10 +29,10 @@ class servicioControlador extends controlador{
 
 	//start get and set
 	function getdescripcion(){
-		return this->descripcion;
+		return $this->descripcion;
 	}
-	function setdescripcion(){
-		this->descripcion=$id;
+	function setdescripcion($descrip){
+		$this->descripcion=$descrip;
 	}
 	//end get and set
 } 

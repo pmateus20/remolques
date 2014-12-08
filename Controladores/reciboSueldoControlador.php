@@ -2,6 +2,8 @@
 
 
 class reciboSueldoControlador extends Controlador{
+	private $fecha;
+	private $importe;
 
 	function nuevo(){
 		$this->vista->render("reciboSueldo/nuevo");
@@ -9,19 +11,27 @@ class reciboSueldoControlador extends Controlador{
 
 
 
+
+
+
+
+
+
+
+
 	//start get and set
 	function getfecha(){
-		return this->fecha;
+		return $this->fecha;
 	}
-	function setfecha($id){
-		this->fecha=$id;
+	function setfecha($fech){
+		$this->fecha=$fech;
 	}
 
 	function getimporte(){
-		return this->importe;
+		return $this->importe;
 	}
-	function setimporte($id){
-		this->importe=$id;
+	function setimporte($imp){
+		$this->importe=$imp;
 	}
 
 

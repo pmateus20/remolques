@@ -3,7 +3,11 @@
 class clienteControlador extends controlador{
 
 	private $apellidoNombre; //falta crear todos las variables de las clases ejemplo private $cuit;
-
+	private $cuit;
+	private $domicilio;
+	private $telefono;
+	private $eMail;
+	private $contacto;
 
 	function crear(){
 		$this->vista->render("cliente/crear");
@@ -39,36 +43,36 @@ class clienteControlador extends controlador{
 	function getcuit(){ 
 		return $this->cuit;
 	}
-	function setcuit(){  //faltan pones la variable temporal en el parentesis ejemplo ($cuit)
-		$this->cuit=$id;	// y modificar los nombres ejemplo =$cuit
+	function setcuit($cuit){  //faltan pones la variable temporal en el parentesis ejemplo ($cuit)
+		$this->cuit=$cuit;	// y modificar los nombres ejemplo =$cuit
 	}
 
 	function getdomicilio(){
 		return $this->domicilio;
 	}
-	function setdomicilio(){
-		$this->domicilio=$id;
+	function setdomicilio($dir){
+		$this->domicilio=$dir;
 	}
 
 	function gettelefono(){
-		$return this->telefono;
+		return $this->telefono;
 	}
-	function settelefono(){
-		$this->telefono=$id;
+	function settelefono($tel){
+		$this->telefono=$tel;
 	}
 
 	function geteMail(){
 		return $this->eMail;
 	}
-	function seteMail(){
-		$this->eMail=$id;
+	function seteMail($mail){
+		$this->eMail=$mail;
 	}
 
 	function getcontacto(){
 		return $this->contacto;
 	}
-	function setcontacto(){
-		$this->contacto=$id;
+	function setcontacto($contac){
+		$this->contacto=$contac;
 	}
 	//fin get y set
 

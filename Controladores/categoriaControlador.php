@@ -1,5 +1,11 @@
 <?php 
 class categoriaControlador extends controlador{
+	private $descripcion;
+	private $salario;
+
+
+
+
 	function crear(){
 		$this->vista->render("categoria/crear");
 	}
@@ -25,17 +31,17 @@ class categoriaControlador extends controlador{
 
 	//start get and set
 	function getdescripcion(){
-		return this->descripcion;
+		return $this->descripcion;
 	}
-	function setdescripcion(){
-		this->descripcion=$id;
+	function setdescripcion($descrip){
+		$this->descripcion=$descrip;
 	}
 
 	function getsalario(){
-		return this->salario;
+		return $this->salario;
 	}
-	function setsalario(){
-		this->salario=$id;
+	function setsalario($sal){
+		$this->salario=$sal;
 	}
 	//end get and set
 } 

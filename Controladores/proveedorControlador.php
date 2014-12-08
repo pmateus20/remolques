@@ -1,6 +1,14 @@
 <?php 
 
 class proveedorControlador extends controlador {
+	private $nombre;
+	private $cuit;
+	private $domicilio;
+	private $telefono;
+	private $eMail;
+	private $contacto;
+
+
 	function crear() {
 		$this->vista->render("proveedor/crear");
 	} 
@@ -31,48 +39,48 @@ class proveedorControlador extends controlador {
 
 	//start get and set
 	function getnombre(){
-		return this->nombre;
+		return $this->nombre;
 	}
 	function setnombre($id){
-		this->nombre=$id;
+		$this->nombre=$id;
 	}
 
 
 	function getcuit(){
-		return this->cuit;
+		return $this->cuit;
 	}
-	function setcuit($id){
-		this->cuit=$id;
+	function setcuit($cuit){
+		$this->cuit=$cuit;
 
 	}
 
 	function getdomicilio(){
-		return this->domicilio;
+		return $this->domicilio;
 	}
-	function setdomicilio($id){
-		this->domicilio=$id;
+	function setdomicilio($dir){
+		$this->domicilio=$dir;
 	}
 
 
 	function gettelefono(){
-		return this->telefono;
+		return $this->telefono;
 	}
-	function settelefono($id){
-		this->telefono=$id;
+	function settelefono($tel){
+		$this->telefono=$tel;
 	}
 
 	function geteMail(){
-		return this->eMail;
+		return $this->eMail;
 	}
-	function seteMail($id){
-		this->eMail=$id;
+	function seteMail($mail){
+		$this->eMail=$mail;
 	}
 
 	function getcontacto(){
-		return this->contacto;
+		return $this->contacto;
 	}
-	function setcontacto($id){
-		this->contacto=$id;
+	function setcontacto($contac){
+		$this->contacto=$contac;
 	}
 	//end get and set
 

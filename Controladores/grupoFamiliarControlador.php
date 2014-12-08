@@ -1,5 +1,13 @@
 <?php 
 class grupoFamiliarControlador extends controlador{
+	private $tipoParentezco;
+	private $apellidoNombre;
+	private $dni;
+
+
+
+
+
 	function crear() {
 		$this->vista->render("grupoFamiliar/crear");
 	}
@@ -14,24 +22,24 @@ class grupoFamiliarControlador extends controlador{
 
 	//start get and set
 	function gettipoParentezco(){
-		return this->tipoParentezco;
+		return $this->tipoParentezco;
 	}
-	function settipoParentezco($id){
-		this->tipoParentezco=$id;
+	function settipoParentezco($tParen){
+		$this->tipoParentezco=$tParen;
 	}
 
 	function getapellidoNombre(){
-		return this->apellidoNombre;
+		return $this->apellidoNombre;
 	}
 	function setapellidoNombreo($id){
-		this->apellidoNombre=$id;
+		$this->apellidoNombre=$id;
 	}
 
 	function getdni(){
-		return this->dni;
+		return $this->dni;
 	}
-	function setdni($id){
-		this->dni=$id;
+	function setdni($dni){
+		$this->dni=$dni;
 	}
 	//end get and set
 }

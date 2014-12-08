@@ -1,5 +1,10 @@
 <?php 
 class articuloControlador extends controlador{
+	private $descripcion;
+
+
+
+
 	function crear(){
 		$this->vista->render("articulo/crear");
 	}
@@ -26,10 +31,10 @@ class articuloControlador extends controlador{
 
 	//start get and set
 	function getdescripcion(){
-		return this->descripcion;
+		return $this->descripcion;
 	}
-	function setdescripcion(){
-		this->descripcion=$id;
+	function setdescripcion($descrip){
+		$this->descripcion=$descrip;
 	}
 	//end get and set
 } 

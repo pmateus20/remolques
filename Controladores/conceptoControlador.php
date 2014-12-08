@@ -1,5 +1,10 @@
 <?php 
 class conceptoControlador extends controlador{
+	private $descripcion;
+	private $tipo;
+
+
+
 	function crear(){
 		$this->vista->render("concepto/crear");
 	}
@@ -26,17 +31,17 @@ class conceptoControlador extends controlador{
 
 	//start get and set
 	function getdescripcion(){
-		return this->descripcion;
+		return $this->descripcion;
 	}
-	function setdescripcion(){
-		this->descripcion=$id;
+	function setdescripcion($descrip){
+		$this->descripcion=$descrip;
 	}
 
 	function gettipo(){
-		return this->tipo;
+		return $this->tipo;
 	}
-	function settipo(){
-		this->tipo=$id;
+	function settipo($tip){
+		$this->tipo=$tip;
 	}
 	//end get and set
 } 
