@@ -1,8 +1,8 @@
 <?php 
 
 class clienteControlador extends controlador{
-	private $idCliente;
-	private $apellidoNombre;
+
+	private $apellidoNombre; //falta crear todos las variables de las clases ejemplo private $cuit;
 
 
 	function crear(){
@@ -29,46 +29,46 @@ class clienteControlador extends controlador{
 
 	//get y set
 	function getapellidoNombre(){
-		return $this->apellidoNombre;
+		return $this->apellidoNombre; // this correjido como $this->
 	}
 
 	function setapellidoNombre($id){
 		$this->apellidoNombre=$id;
 	}
 
-	function getcuit(){
-		return this->cuit;
+	function getcuit(){ 
+		return $this->cuit;
 	}
-	function setcuit(){
-		this->cuit=$id;
+	function setcuit(){  //faltan pones la variable temporal en el parentesis ejemplo ($cuit)
+		$this->cuit=$id;	// y modificar los nombres ejemplo =$cuit
 	}
 
 	function getdomicilio(){
-		return this->domicilio;
+		return $this->domicilio;
 	}
 	function setdomicilio(){
-		this->domicilio=$id;
+		$this->domicilio=$id;
 	}
 
 	function gettelefono(){
-		return this->telefono;
+		$return this->telefono;
 	}
 	function settelefono(){
-		this->telefono=$id;
+		$this->telefono=$id;
 	}
 
 	function geteMail(){
-		return this->eMail;
+		return $this->eMail;
 	}
 	function seteMail(){
-		this->eMail=$id;
+		$this->eMail=$id;
 	}
 
 	function getcontacto(){
-		return this->contacto;
+		return $this->contacto;
 	}
 	function setcontacto(){
-		this->contacto=$id;
+		$this->contacto=$id;
 	}
 	//fin get y set
 
