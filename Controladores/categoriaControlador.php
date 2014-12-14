@@ -9,11 +9,80 @@ class categoriaControlador extends controlador{
 	function crear(){
 		$this->vista->render("categoria/crear");
 	}
-	function listar(){
-		$this->vista->render("categoria/listar");
+	
+
+	function guardar(){
+		if(isset($_POST["Guardar"])){
+			$this->setdescripcion($_POST["descripcion"]);
+			$this->setsalario($_POST["salario"]);
+			
+
+			$r=array(
+				"codCategoria"=>"null",
+				"descripcion"=>$this->getdescripcion(),
+				"salario"=>$this->getsalario()
+				
+				);
+			
+			$model=new categoriaModelo();
+			$model->nuevaCategoria($r);
+
+			$this->vista->render("categoria/crear");
+		}
 	}
 
 
+	function listar($mode=null){
+		$model=new categoriaModelo();
+		$r=$model->listar();
+		if(!isset($mode)){
+			$this->vista->render("categoria/listar",$r);
+		}else{
+			return $r;
+		}
+		
+	}
+
+	function eliminar(){
+		$id=$_GET["id"];
+
+		$model=new categoriaModelo();
+		$model->eliminarcategoria($id);
+
+		$this->listar();
+
+	}
+
+	function editar(){
+		$id=$_GET["id"];
+
+		$model=new categoriaModelo();
+		$r=$model->buscarCategoria($id);
+
+		$this->vista->render("categoria/editar",$r);
+
+	}
+
+	function guardarEdicion(){
+		if(isset($_POST["Guardar"])){
+			$this->setdescripcion($_POST["descripcion"]);
+			$this->setsalario($_POST["salario"]);
+
+			$r=array(
+				"codCategoria"=>"null",
+				"descripcion"=>$this->getdescripcion(),
+				"salario"=>$this->getsalario()
+				);
+			
+			$model=new categoriaModelo();
+			$model->guardarEdicion($r,$_POST["id"]);
+
+			$this->listar();
+		}
+	}
+
+
+	
 
 
 

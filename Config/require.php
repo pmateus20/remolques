@@ -12,12 +12,20 @@ require_once("Config/modelo.php");
 //require_once("Controladores/principalControlador.php");
 
 
+
 //Vistas
 
 
 
 //Modelos
-
+require_once("Modelos/clienteModelo.php");
+require_once("Modelos/servicioModelo.php");
+require_once("Modelos/listaPrecioModelo.php");
+require_once("Modelos/lineaListaPrecioModelo.php");
+require_once("Modelos/categoriaModelo.php");
+require_once("Modelos/empleadoModelo.php");
+require_once("Modelos/ordenServicioModelo.php");
+require_once("Modelos/lineaOrdenServicioModelo.php");
 
 
  ?>

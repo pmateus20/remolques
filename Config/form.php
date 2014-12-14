@@ -10,11 +10,13 @@ class form{
 
 		function addTextbox($nombre,$valor=null){
 			if(!is_null($valor)){
-				$value="value=".$valor." ";
+				$value="value='".$valor."' ";
 			}else{
 				$value="";
 			}
 			echo "<input class='form-control' type='text' name='".$nombre."' ".$value.">";
+
+			
 		}
 
 		function addPassword($nombre){
@@ -25,10 +27,11 @@ class form{
 			echo "<label>".$texto."</label>";
 		}
 
-		function addCombo($nombre,$array){
+		function addCombo($nombre,$array,$selected=null){
 			echo "<select class='form-control' name='".$nombre."'>";
 			foreach($array as $key => $value){
-				echo "<option value='".$value."'>".$key."</option>";
+				if($value==$selected){$op="selected";}else{$op="";}
+				echo "<option value='".$value."' $op>".$key."</option>";
 			}
 			echo "</select>";
 		}

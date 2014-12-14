@@ -4,7 +4,7 @@
 $f=new form();
 
 
-$f->iniciarForm("post","categoria/crear","nuevoCategoria");
+$f->iniciarForm("post","index.php?p=categoria/guardar","nuevoCategoria");
 $f->addLabel("Descripcion");
 $f->addTextbox("descripcion");
 $f->addLabel("Salario");

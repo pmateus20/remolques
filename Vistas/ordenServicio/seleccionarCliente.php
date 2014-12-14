@@ -1,4 +1,4 @@
-<h3>Listado de Clientes</h3>
+<h3>Seleccionar Cliente</h3>
 
 
 <?php 
@@ -22,9 +22,7 @@ $f->finForm();
  		<th>Apellido y Nombre</th>
  		<th>CUIT</th>
  		<th></th>
- 		<th></th>
- 		<th></th>
- 		<th></th>
+ 		
  	</tr>
  	<?php
  	
@@ -41,18 +39,8 @@ $f->finForm();
 				echo $fila["CUIT"];
 				echo "</td>";
 				echo "<td>";
-				echo "<a href='index.php?p=cliente/ver&id=".$fila["Codigo"]."'>Ver</a>";
+				echo "<a href='index.php?p=ordenServicio/nueva&id=".$fila["Codigo"]."'>Seleccionar</a>";
 				echo "</td>";
-				echo "<td>";
-				echo "<a href='index.php?p=cliente/editar&id=".$fila["Codigo"]."'>Editar</a>";
-				echo "</td>";
-				echo "<td>";
-				echo "<a href='index.php?p=cliente/eliminar&id=".$fila["Codigo"]."'>Eliminar</a>";
-				echo "</td>";
-				echo "<td>";
-				echo "<a href='index.php?p=cliente/cargarLista&id=".$fila["Codigo"]."'>Cargar Lista de Precio</a>";
-				echo "</td>";
-					
 			
 			echo "</tr>";
 		}

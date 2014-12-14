@@ -20,18 +20,23 @@
 			<ul class="nav nav-pills nav-stacked">
  				<li> <a href="index.php?p=cliente/crear">Nuevo Cliente</a></li>
  				<li> <a href="index.php?p=cliente/listar">Listar Clientes</a></li>
- 				<li> <a href="index.php?p=factura/crear">Facturar</a></li>
- 				<li> <a href="index.php?p=ordenServicio/crear">Nueva Orden de Servicio</a></li>
- 				<li> <a href="index.php?p=proveedor/crear">Nuevo Proveedor</a></li>
- 				<li> <a href="index.php?p=proveedor/listar">Listar Proveedor</a></li>
- 				<li> <a href="index.php?p=empleado/crear">Nuevo Empleado</a></li>
- 				<li> <a href="index.php?p=empleado/listar">Listar Empleado</a></li>
- 				<li> <a href="index.php?p=articulo/crear">Nuevo Articulo</a></li>
- 				<li> <a href="index.php?p=articulo/listar">Listar Articulo</a></li>
- 				<li> <a href="index.php?p=categoria/crear">Nueva Categoria</a></li>
- 				<li> <a href="index.php?p=categoria/listar">Listar Categoria</a></li>
+ 				<li> <a href="index.php?p=factura/nueva">Facturar</a></li>
+ 				<li> <a href="index.php?p=ordenServicio/seleccionarCliente">Nueva Orden de Servicio</a></li>
  				<li> <a href="index.php?p=servicio/crear">Nuevo Servicio</a></li>
  				<li> <a href="index.php?p=servicio/listar">Listar Servicio</a></li>
+ 				<li> <a href="index.php?p=listaPrecio/cargar">Cargar Lista de Precios</a></li>
+ 				<li> <a href="index.php?p=listaPrecio/listar">Listar Lista de Precios</a></li>
+ 				<li> <a href="index.php?p=categoria/crear">Nueva Categoria</a></li>
+ 				<li> <a href="index.php?p=categoria/listar">Listar Categoria</a></li>
+ 				<li> <a href="index.php?p=empleado/crear">Nuevo Empleado</a></li>
+ 				<li> <a href="index.php?p=empleado/listar">Listar Empleado</a></li>
+<!--
+ 				<li> <a href="index.php?p=proveedor/crear">Nuevo Proveedor</a></li>
+ 				<li> <a href="index.php?p=proveedor/listar">Listar Proveedor</a></li>
+ 				
+ 				<li> <a href="index.php?p=articulo/crear">Nuevo Articulo</a></li>
+ 				<li> <a href="index.php?p=articulo/listar">Listar Articulo</a></li>
+ 				
  				<li> <a href="index.php?p=concepto/crear">Nuevo Concepto</a></li>
  				<li> <a href="index.php?p=concepto/listar">Listar Concepto</a></li>
  				<li> <a href="index.php?p=grupoFamiliar/crear">Nuevo Grupo Familiar</a></li>
@@ -39,9 +44,9 @@
  				<li> <a href="index.php?p=factura/nueva">Nueva Factura</a></li>
  				<li> <a href="index.php?p=factura/facturarOrdenes">Facturar Ordenes</a></li>
  				<li> <a href="index.php?p=facturaCompra/nueva">Nueva Factura de Compra</a></li>
- 				<li> <a href="index.php?p=listaPrecio/cargar">Cargar Lista de Precios</a></li>
+ 				
  				<li> <a href="index.php?p=reciboSueldo/nuevo">Nuevo Recibo de Sueldo</a></li>
-
+-->
  			</ul>
 		</div>
 		<div class="col-md-10">
