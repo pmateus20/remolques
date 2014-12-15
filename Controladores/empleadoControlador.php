@@ -177,6 +177,11 @@ class empleadoControlador extends controlador{
 	}
 
 
+	function buscarEmpleado($id){
+		$model=new empleadoModelo();
+		$r=$model->buscarEmpleado($id);
+		return $r;	
+	}
 
 
 

@@ -20,8 +20,8 @@
 				echo $fila["Descripcion"];
 				echo "</td>";
 				echo "<td>";
-				if($fila["Descripcion"]=="D"){echo "Haber";}
-				if($fila["Descripcion"]=="H"){echo "Deduccion";}
+				if($fila["Tipo"]=="D"){echo "Haber";}
+				if($fila["Tipo"]=="H"){echo "Deduccion";}
 				echo "</td>";
 				echo "<td>";
 				echo "<a href='index.php?p=concepto/editar&id=".$fila["Codigo"]."'>Editar</a>";

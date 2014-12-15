@@ -34,5 +34,7 @@ require_once("Modelos/FacturaCompraModelo.php");
 require_once("Modelos/lineaFacturaCompraModelo.php");
 require_once("Modelos/conceptoModelo.php");
 require_once("Modelos/grupoFamiliarModelo.php");
+require_once("Modelos/reciboSueldoModelo.php");
+require_once("Modelos/detalleReciboSueldoModelo.php");
 
  ?>
