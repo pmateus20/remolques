@@ -66,6 +66,30 @@ class empleadoModelo extends modelo{
 		$this->update("Empleado","where legajo = $id");
 	}
 
+	function buscarUsuario($id){
+		$this->conectar();
+		$result=$this->consulta("Empleado","where usuario = '$id'");
+			if(mysql_num_rows($result)>0){
+
+				while($linea=mysql_fetch_array($result)){
+					$reg=array(
+						"codigo"=>$linea["legajo"],
+						"nombre"=>$linea["apellidoNombre"],
+						"usuario"=>$linea["usuario"],
+						"password"=>$linea["password"],
+						"tipoUsuario"=>$linea["tipoUsuario"]
+						
+						);
+				}
+
+				return $reg;
+
+			}else{
+				return null;
+			}
+		
+	}
+
 	
 
 

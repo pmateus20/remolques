@@ -26,6 +26,11 @@ require_once("Modelos/categoriaModelo.php");
 require_once("Modelos/empleadoModelo.php");
 require_once("Modelos/ordenServicioModelo.php");
 require_once("Modelos/lineaOrdenServicioModelo.php");
-
+require_once("Modelos/facturaModelo.php");
+require_once("Modelos/lineaFacturaModelo.php");
+require_once("Modelos/articuloModelo.php");
+require_once("Modelos/proveedorModelo.php");
+require_once("Modelos/FacturaCompraModelo.php");
+require_once("Modelos/lineaFacturaCompraModelo.php");
 
  ?>

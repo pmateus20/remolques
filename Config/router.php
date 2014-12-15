@@ -6,7 +6,12 @@
 			if(isset($_GET["p"])){
 				$this->url=$_GET["p"];
 			}else{
-				$this->url="principal/main";
+				if(isset($_SESSION["login"])){
+					$this->url="principal/main";	
+				}else{
+					$this->url="login/iniciar";	
+				}
+				
 			}
 
 		}

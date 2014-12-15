@@ -45,7 +45,8 @@ class clienteControlador extends controlador{
 
 	function listar($mode=null){
 		$model=new clienteModelo();
-		$r=$model->listar();
+		$r=$model->listar();	
+				
 		if(!isset($mode)){
 			$this->vista->render("cliente/listar",$r);
 		}else{
@@ -68,7 +69,7 @@ class clienteControlador extends controlador{
 		$id=$_GET["id"];
 
 		$model=new clienteModelo();
-		$r=$model->editarCliente($id);
+		$r=$model->buscarCliente($id);
 
 		$this->vista->render("cliente/editar",$r);
 
@@ -130,6 +131,12 @@ class clienteControlador extends controlador{
 
 		$this->listar();
 
+	}
+
+	function buscarCliente($id){
+		$model=new clienteModelo();
+		$r=$model->buscarCliente($id);
+		return $r;	
 	}
 
 

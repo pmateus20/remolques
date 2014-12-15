@@ -4,7 +4,7 @@
 $f=new form();
 
 
-$f->iniciarForm("post","articulo/crear","nuevoArticulo");
+$f->iniciarForm("post","index.php?p=articulo/guardar","nuevoArticulo");
 $f->addLabel("Descripcion");
 $f->addTextbox("descripcion");
 $f->addSubmit("Guardar");

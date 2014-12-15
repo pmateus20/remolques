@@ -1,13 +1,13 @@
 <?php 
 
 
-class lineaOrdenServicioModelo extends modelo{
+class lineaFacturaModelo extends modelo{
 
 	
 
-	function listarLineaOrdenServicio($id){
+	function listarLineaFactura($id){
 		$this->conectar();
-		$result=$this->consulta("LineaOrdenServicio","where FK_idOrdenServicio = $id ","Servicio","FK_idServicio","idServicio");	
+		$result=$this->consulta("LineaFactura","where FK_idFactura = $id ","Servicio","FK_idServicio","idServicio");	
 		if (mysql_num_rows($result)>0){
 			$reg=array();
 			while($linea=mysql_fetch_array($result)){
@@ -29,16 +29,16 @@ class lineaOrdenServicioModelo extends modelo{
 	function eliminarLinea($id,$serv=null){
 		$this->conectar();
 		if(isset($serv)){
-			$this->eliminar("LineaOrdenServicio","FK_idOrdenServicio = $id and FK_idServicio = $serv");	
+			$this->eliminar("LineaFactura","FK_idFactura = $id and FK_idServicio = $serv");	
 		}else{
-			$this->eliminar("LineaOrdenServicio","FK_idOrdenServicio = $id");	
+			$this->eliminar("LineaFactura","FK_idFactura = $id");	
 		}
 		
 	}
 
 	function calcularTotal($id){
 		$this->conectar();
-		$result=$this->consulta("LineaOrdenServicio","where FK_idOrdenServicio = $id ");	
+		$result=$this->consulta("LineaFactura","where FK_idFactura = $id ");	
 		if (mysql_num_rows($result)>0){
 			$total=0;
 			while($linea=mysql_fetch_array($result)){

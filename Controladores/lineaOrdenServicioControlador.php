@@ -52,6 +52,11 @@ class lineaOrdenServicioControlador extends controlador{
 		return $this->servicio->buscarServicioValorizado($id,$lp);
 	}
 
+	function calcularTotal($id){
+		$model=new lineaOrdenServicioModelo();
+		return $model->calcularTotal($id);
+	}
+
 
 
 

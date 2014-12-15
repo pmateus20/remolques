@@ -24,10 +24,11 @@ class modelo{
 			$sql="select * from ".$tabla." as t1 join ".$join." as t2 on t1.".$c1." = t2.".$c2;
 			
 		}
-		
+
 		if (!is_null($condicion)){
 				$sql=$sql." ".$condicion;
 			}
+		
 		
 		$resultado=mysql_query($sql) or die('Consulta fallida: ' . mysql_error());
 		return $resultado;

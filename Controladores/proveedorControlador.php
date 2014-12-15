@@ -9,12 +9,114 @@ class proveedorControlador extends controlador {
 	private $contacto;
 
 
-	function crear() {
+	function crear(){
 		$this->vista->render("proveedor/crear");
-	} 
-	function listar() {
-		$this->vista->render("proveedor/listar");
 	}
+	
+
+
+	function guardar(){
+		if(isset($_POST["Guardar"])){
+			$this->setnombre($_POST["nombre"]);
+			$this->setcuit($_POST["cuit"]);
+			$this->setdomicilio($_POST["domicilio"]);
+			$this->settelefono($_POST["telefono"]);
+			$this->seteMail($_POST["email"]);
+			$this->setcontacto($_POST["contacto"]);
+
+			$r=array(
+				"idProveedor"=>"null",
+				"nombre"=>$this->getnombre(),
+				"cuit"=>$this->getcuit(),
+				"domicilio"=>$this->getdomicilio(),
+				"telefono"=>$this->gettelefono(),
+				"eMail"=>$this->geteMail(),
+				"contacto"=>$this->getcontacto()
+				);
+			
+			$model=new proveedorModelo();
+			$model->nuevoProveedor($r);
+
+			$this->lista();
+		}
+	}
+
+	function listar($mode=null){
+		$model=new proveedorModelo();
+		$r=$model->listar();	
+				
+		if(!isset($mode)){
+			$this->vista->render("proveedor/listar",$r);
+		}else{
+			return $r;
+		}
+		
+	}
+
+	function eliminar(){
+		$id=$_GET["id"];
+
+		$model=new proveedorModelo();
+		$model->eliminarProveedor($id);
+
+		$this->listar();
+
+	}
+
+	function editar(){
+		$id=$_GET["id"];
+
+		$model=new proveedorModelo();
+		$r=$model->buscarProveedor($id);
+
+		$this->vista->render("proveedor/editar",$r);
+
+	}
+
+	function guardarEdicion(){
+		if(isset($_POST["Guardar"])){
+			$this->setnombre($_POST["nombre"]);
+			$this->setcuit($_POST["cuit"]);
+			$this->setdomicilio($_POST["domicilio"]);
+			$this->settelefono($_POST["telefono"]);
+			$this->seteMail($_POST["email"]);
+			$this->setcontacto($_POST["contacto"]);
+
+			$r=array(
+				"nombre"=>$this->getnombre(),
+				"cuit"=>$this->getcuit(),
+				"domicilio"=>$this->getdomicilio(),
+				"telefono"=>$this->gettelefono(),
+				"eMail"=>$this->geteMail(),
+				"contacto"=>$this->getcontacto()
+				);
+			
+			$model=new proveedorModelo();
+			$model->guardarEdicion($r,$_POST["id"]);
+
+			$this->listar();
+		}
+	}
+
+
+	function ver(){
+		$id=$_GET["id"];
+
+		$model=new proveedorModelo();
+		$r=$model->buscarProveedor($id);
+
+		$this->vista->render("proveedor/ver",$r);
+
+	}
+
+	
+
+	function buscarProveedor($id){
+		$model=new proveedorModelo();
+		$r=$model->buscarProveedor($id);
+		return $r;	
+	}
+
 
 
 

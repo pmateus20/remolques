@@ -1,13 +1,15 @@
-<h3>Listado de Articulos</h3>
+<h3>Seleccionar Proveedor</h3>
+
 
 
 
  <table class='table table-striped'>
  	<tr>
  		<th>Codigo</th>
- 		<th>Descripcion</th>
+ 		<th>Apellido y Nombre</th>
+ 		<th>CUIT</th>
  		<th></th>
- 		<th></th>
+ 		
  	</tr>
  	<?php
  	
@@ -18,15 +20,14 @@
 				echo $fila["Codigo"];
 				echo "</td>";
 				echo "<td>";
-				echo $fila["Descripcion"];
+				echo $fila["Nombre"];
 				echo "</td>";
 				echo "<td>";
-				echo "<a href='index.php?p=articulo/editar&id=".$fila["Codigo"]."'>Editar</a>";
+				echo $fila["CUIT"];
 				echo "</td>";
 				echo "<td>";
-				echo "<a href='index.php?p=articulo/eliminar&id=".$fila["Codigo"]."'>Eliminar</a>";
+				echo "<a href='index.php?p=facturaCompra/nueva&id=".$fila["Codigo"]."'>Seleccionar</a>";
 				echo "</td>";
-					
 			
 			echo "</tr>";
 		}
