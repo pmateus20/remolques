@@ -1,24 +1,7 @@
 <h3>Listado de Categoria</h3>
 
 
-<?php 
 
-$f=new form();
-
-
-echo "<h4>Buscar Categoria</h4>";
-$f->iniciarForm("POST","categoria/listar","listarCategoria");
-$f->addLabel("Descripcion");
-$f->addTextbox("descripcion");
-
-$f->addSubmit("Buscar");
-$f->finForm();
-
-
-
-
-
- ?>
 
  <table class='table table-striped'>
  	<tr>

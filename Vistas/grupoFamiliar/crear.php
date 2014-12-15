@@ -7,7 +7,7 @@ $f->iniciarForm("post","index.php?p=grupoFamiliar/guardar","nuevoGrupoFamiliar")
 $f->addLabel("Apellido y Nombre");
 $f->addTextbox("nombre");
 $f->addLabel("DNI");
-$f->addTextbox("dni");
+$f->addTextbox("dni",null,8);
 $f->addLabel("Tipo de Parentezco");
 $f->addTextbox("tipoParentezco");
 $f->addHidden("empleado",$dato1);

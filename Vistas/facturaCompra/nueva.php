@@ -5,7 +5,9 @@ $f=new form();
 $f->iniciarForm("POST","index.php?p=facturaCompra/guardar","facturaCompra");
 
 $f->addLabel("Fecha");
-$f->addTextbox("fecha");
+$f->addTextbox("fecha",null,10);
+
+$f->addLabel("Tipo");
 $f->addCombo("tipo",array("A"=>"A","B"=>"B"));
 $f->addLabel("Punto de Ventas");
 $f->addTextbox("ptoVenta");

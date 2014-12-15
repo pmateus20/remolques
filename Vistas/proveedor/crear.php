@@ -8,7 +8,7 @@ $f->iniciarForm("post","index.php?p=proveedor/guardar","nuevoProveedor");
 $f->addLabel("Apellido y Nombre o Razon Social");
 $f->addTextbox("nombre");
 $f->addLabel("CUIT");
-$f->addTextbox("cuit");
+$f->addTextbox("cuit",null,11);
 $f->addLabel("Domicilio");
 $f->addTextbox("domicilio");
 $f->addLabel("Telefono");

@@ -8,13 +8,19 @@ class form{
 
 		}
 
-		function addTextbox($nombre,$valor=null){
+		function addTextbox($nombre,$valor=null,$maxlength=null){
 			if(!is_null($valor)){
 				$value="value='".$valor."' ";
 			}else{
 				$value="";
 			}
-			echo "<input class='form-control' type='text' name='".$nombre."' ".$value.">";
+			if(!is_null($maxlength)){
+				$m="maxlength=".$maxlength;
+			}else{
+				$m="";
+			}
+
+			echo "<input class='form-control' type='text' name='".$nombre."' ".$value." ".$m.">";
 
 			
 		}

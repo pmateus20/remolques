@@ -13,7 +13,7 @@ $f->addHidden("id",$a["codigo"]);
 $f->addLabel("Apellido y Nombre o Razon Social");
 $f->addTextbox("nombre",$a["nombre"]);
 $f->addLabel("CUIT");
-$f->addTextbox("cuit",$a["cuit"]);
+$f->addTextbox("cuit",$a["cuit"],11);
 $f->addLabel("Domicilio");
 $f->addTextbox("domicilio",$a["domicilio"]);
 $f->addLabel("Telefono");

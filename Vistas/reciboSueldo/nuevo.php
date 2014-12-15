@@ -5,7 +5,7 @@ $f=new form();
 $f->iniciarForm("POST","index.php?p=reciboSueldo/guardar","reciboSueldo");
 
 $f->addLabel("Fecha");
-$f->addTextbox("fecha");
+$f->addTextbox("fecha",null,10);
 
 
 $f->addHidden("empleado",$dato1);

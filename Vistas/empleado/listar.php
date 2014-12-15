@@ -1,21 +1,7 @@
 <h3>Listado de Empleados</h3>
 
 
-<?php 
 
-$f=new form();
-
-
-echo "<h4>Buscar Empleado</h4>";
-$f->iniciarForm("POST","empleado/listar","listarEmpleado");
-$f->addLabel("Apellido y Nombre");
-$f->addTextbox("nombre");
-$f->addSubmit("Buscar");
-$f->finForm();
-
-
-
- ?>
 
  <table class='table table-striped'>
  	<tr>
