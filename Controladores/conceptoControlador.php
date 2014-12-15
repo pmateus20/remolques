@@ -9,13 +9,79 @@ class conceptoControlador extends controlador{
 		$this->vista->render("concepto/crear");
 	}
 	function listar(){
-		$this->vista->render("concepto/listar");
+		$model=new conceptoModelo();
+		$r=$model->listar();
+
+		$this->vista->render("concepto/listar",$r);
 	}
 
 
+	function guardar(){
+		if(isset($_POST["Guardar"])){
+			$this->setdescripcion($_POST["descripcion"]);
+			$this->settipo($_POST["tipo"]);
 
 
+			$r=array(
+				"codConcepto"=>"null",
+				"descripcion"=>$this->getdescripcion(),
+				"tipo"=>$this->gettipo()
+				);
 
+			$model=new conceptoModelo();
+			$model->nuevoConcepto($r);
+			$this->vista->render("concepto/crear");
+		}
+	}
+
+
+	function buscarConcepto($condi=null){
+		$model=new conceptoModelo();
+		return $model->buscarConcepto($condi);
+		
+	}
+
+	function eliminar(){
+		$id=$_GET["id"];
+
+		$model=new conceptoModelo();
+		$model->eliminarConcepto($id);
+
+		$this->listar();
+
+	}
+
+	function editar(){
+		$id=$_GET["id"];
+
+		$model=new conceptoModelo();
+		$r=$model->buscarConcepto("where codConcepto = $id");
+		
+
+		$this->vista->render("concepto/editar",$r[0]);
+
+	}
+
+	function guardarEdicion(){
+		if(isset($_POST["Guardar"])){
+			$this->setdescripcion($_POST["descripcion"]);
+			$this->settipo($_POST["tipo"]);
+
+
+			$r=array(
+					"descripcion"=>$this->getdescripcion(),
+					"tipo"=>$this->gettipo()
+				);
+
+			
+			$model=new conceptoModelo();
+			$model->guardarEdicion($r,$_POST["id"]);
+
+			$this->listar();
+		}
+	}
+
+	
 
 
 

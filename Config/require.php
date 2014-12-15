@@ -32,5 +32,7 @@ require_once("Modelos/articuloModelo.php");
 require_once("Modelos/proveedorModelo.php");
 require_once("Modelos/FacturaCompraModelo.php");
 require_once("Modelos/lineaFacturaCompraModelo.php");
+require_once("Modelos/conceptoModelo.php");
+require_once("Modelos/grupoFamiliarModelo.php");
 
  ?>

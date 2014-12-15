@@ -25,6 +25,7 @@ $f->finForm();
  		<th></th>
  		<th></th>
  		<th></th>
+ 		<th></th>
  		
  	</tr>
  	<?php
@@ -57,6 +58,9 @@ $f->finForm();
 					echo "</td>";
 	
 				}
+				echo "<td>";
+				echo "<a href='index.php?p=grupoFamiliar/crear&id=".$fila["codigo"]."'>Grupo Familiar</a>";
+				echo "</td>";
 					
 			
 			echo "</tr>";

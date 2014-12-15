@@ -40,13 +40,14 @@
  				<li> <a href="index.php?p=proveedor/listar">Listar Proveedor</a></li>
  				<li> <a href="index.php?p=facturaCompra/seleccionarProveedor">Nueva Factura de Compra</a></li>
  				<li> <a href="index.php?p=facturaCompra/listar">Lista Facturas de Compra</a></li>
+ 				<li> <a href="index.php?p=concepto/crear">Nuevo Concepto</a></li>
+ 				<li> <a href="index.php?p=concepto/listar">Listar Concepto</a></li>
 <!--
  				
  				
  				
  				
- 				<li> <a href="index.php?p=concepto/crear">Nuevo Concepto</a></li>
- 				<li> <a href="index.php?p=concepto/listar">Listar Concepto</a></li>
+ 				
  				<li> <a href="index.php?p=grupoFamiliar/crear">Nuevo Grupo Familiar</a></li>
  				<li> <a href="index.php?p=ordenServicio/nueva">Nueva Orden de Servicio</a></li>
  				<li> <a href="index.php?p=factura/nueva">Nueva Factura</a></li>

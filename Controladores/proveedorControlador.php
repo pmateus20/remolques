@@ -37,7 +37,7 @@ class proveedorControlador extends controlador {
 			$model=new proveedorModelo();
 			$model->nuevoProveedor($r);
 
-			$this->lista();
+			$this->listar();
 		}
 	}
 

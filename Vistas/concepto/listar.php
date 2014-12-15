@@ -1,32 +1,41 @@
 <h3>Listado de Concepto</h3>
 
+<table class='table table-striped'>
+ 	<tr>
+ 		<th>Codigo</th>
+ 		<th>Descripcion</th>
+ 		<th>Tipo</th>
+ 		<th></th>
+ 		<th></th>
+ 	</tr>
+ 	<?php
+ 	
+ 		foreach ($array as $fila) {
+		
+			echo "<tr>";
+				echo "<td>";
+				echo $fila["Codigo"];
+				echo "</td>";
+				echo "<td>";
+				echo $fila["Descripcion"];
+				echo "</td>";
+				echo "<td>";
+				if($fila["Descripcion"]=="D"){echo "Haber";}
+				if($fila["Descripcion"]=="H"){echo "Deduccion";}
+				echo "</td>";
+				echo "<td>";
+				echo "<a href='index.php?p=concepto/editar&id=".$fila["Codigo"]."'>Editar</a>";
+				echo "</td>";
+				echo "<td>";
+				echo "<a href='index.php?p=concepto/eliminar&id=".$fila["Codigo"]."'>Eliminar</a>";
+				echo "</td>";
+					
+			
+			echo "</tr>";
+		}
+		
+		
+		
+	?>
 
-<?php 
-
-$f=new form();
-
-
-echo "<h4>Buscar Concepto</h4>";
-$f->iniciarForm("POST","concepto/listar","listarConcepto");
-$f->addLabel("Descripcion");
-$f->addTextbox("descripcion");
-$f->addLabel("Tipo");
-$f->addTextbox("tipo");
-
-$f->addSubmit("Buscar");
-$f->finForm();
-
-//Tabla ejemplo para prototipo de ventanas
-
-$registro=array(
-	array("descripcion"=>"Sueldo", "tipo"=>"Mensual"),
-	array("descripcion"=>"Aguinaldo", "tipo"=>"Semestral")
-
-	);
-
-$t=new tabla($registro);
-$t->mostrarTabla();
-
-
-
- ?>
+ </table>

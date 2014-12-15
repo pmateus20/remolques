@@ -50,7 +50,7 @@ class empleadoControlador extends controlador{
 			$model=new empleadoModelo();
 			$model->nuevoEmpleado($r);
 
-			$this->vista->render("cliente/crear");
+			$this->vista->render("empleado/crear");
 		}
 	}
 
