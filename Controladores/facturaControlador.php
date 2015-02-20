@@ -216,7 +216,10 @@ class facturaControlador extends controlador{
 
 	}
 
-
+	function facturaImp(){
+		
+		$this->vista->render("factura/facturaImp",null,null,null);
+	}
 
 
 	
