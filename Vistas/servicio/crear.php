@@ -1,13 +1,44 @@
-<h3>Nuevo Servicio</h3>
-<?php 	
+<div class="panel panel-info">
+  <div class="panel-heading"><h4>Nuevo Servicio</h4></div>
+  <div class="panel-body">
 
-$f=new form();
+
+	<?php 	
+
+	$f=new form();
 
 
-$f->iniciarForm("post","index.php?p=servicio/guardar","nuevoServicio");
-$f->addLabel("Descripcion");
-$f->addTextbox("descripcion");
-$f->addSubmit("Guardar");
-$f->finForm();
+	$f->iniciarForm("post","index.php?p=servicio/guardar","nuevoServicio");
 
- ?>
+	$f->group(10);
+	$f->addLabel("Descripcion");
+	$f->addTextbox("descripcion");
+	$f->endGroup();
+
+	$f->group(10);
+	$f->addSubmit("Guardar");
+	$f->endGroup();
+
+	$f->finForm();
+
+	?>	
+
+  </div>
+</div>
+
+
+<script type="text/javascript">
+	$( "#nuevoServicio" ).validate({
+		rules: {
+			descripcion: {	
+				required:true,
+				minlength: 5
+			},
+		},
+		messages: {
+			descripcion: "El campo est&aacute; vacio o el nombre no es v&aacute;lido para este campo.",
+			
+		}
+	});
+
+</script>
