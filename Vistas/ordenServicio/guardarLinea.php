@@ -1,32 +1,45 @@
-<?php 
-
-$f=new form();
-
-$f->iniciarForm("post","index.php?p=ordenServicio/guardarLinea","guardarLinea");
-
-$f->addLabel("Servicio");
-
-echo ": ".$array["Descripcion"]."<br>";
-
-$f->addLabel("Cantidad");
-$f->addTextbox("cantidad");
-
-
-$f->addLabel("Precio");
-$f->addTextbox("precio",$array["Precio"]);
-
-$f->addHidden("idServicio",$array["Codigo"]);
-$f->addHidden("ordenServicio",$dato1);
-
-
-$f->addSubmit("Guardar");
+<div class="panel panel-info">
+  <div class="panel-heading"><h4>Ingresar Cantidad</h4></div>
+  <div class="panel-body">
 
 
 
-$f->finForm();
+	<?php 
+
+	$f=new form();
+
+	$f->iniciarForm("post","index.php?p=ordenServicio/guardarLinea","guardarLinea");
+
+	$f->group(10);
+	$f->addLabel("Servicio");
+
+	echo ": ".$array["Descripcion"]."<br>";
+	$f->endGroup();
+
+	$f->group(10);
+	$f->addLabel("Cantidad");
+	$f->addTextbox("cantidad");
+	$f->endGroup();
+
+	$f->group(10);
+	$f->addLabel("Precio");
+	$f->addTextbox("precio",$array["Precio"]);
+	$f->addHidden("idServicio",$array["Codigo"]);
+	$f->addHidden("ordenServicio",$dato1);
+	$f->endGroup();
+
+	$f->group(10);
+	$f->addSubmit("Guardar");
+	$f->endGroup();
+
+
+	$f->finForm();
 
 
 
 
 
- ?>
+	 ?>
+
+    </div>
+</div>

@@ -1,4 +1,13 @@
+
+
 <?php $a=$array; ?>
+
+<div class="panel panel-info">
+  <div class="panel-heading"><h4>Cliente: <?php echo $a["nombre"] ?></h4></div>
+  <div class="panel-body">
+
+
+
 <table class='table table-striped'>
 	<tr>
 		<td><strong>Codigo:</strong></td>
@@ -29,3 +38,6 @@
 		<td><?php echo $a["contacto"] ?></td>
 	</tr>
 </table>
+
+ </div>
+</div>
