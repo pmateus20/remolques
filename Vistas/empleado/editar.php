@@ -1,5 +1,5 @@
 <div class="panel panel-info">
-  <div class="panel-heading"><h4>Editar Cliente</h4></div>
+  <div class="panel-heading"><h4>Editar Empleado</h4></div>
   <div class="panel-body">
 
 
