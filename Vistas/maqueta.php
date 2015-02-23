@@ -46,8 +46,7 @@
 					 				<li class="divider"></li>
 					 				<li> <a href="index.php?p=factura/seleccionarCliente">Nueva Factura</a></li>
 					 				<li> <a href="index.php?p=factura/listar">Listar Facturas</a></li>
-					 				<li> <a href="index.php?p=factura/facturaImp">Imprimir Factura</a></li>
-								</ul>
+					 			</ul>
 							</li>
 							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Compras <span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
@@ -75,15 +74,10 @@
 					 				<li class="divider"></li>
 					 				<li> <a href="index.php?p=reciboSueldo/seleccionarEmpleado">Nuevo Recibo de Sueldo</a></li>
 					 				<li> <a href="index.php?p=reciboSueldo/listar">Listar Recibos de Sueldo</a></li>
-					 				<li> <a href="index.php?p=reciboSueldo/imprimir">Imprimir Recibos de Sueldo</a></li>
-									<?php } ?>
+					 				<?php } ?>
 								</ul>
 							</li>
-							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Opciones <span class="caret"></span></a>
-								<ul class="dropdown-menu" role="menu">
-
-								</ul>
-							</li>
+							
 						</ul>
 						
 						<p class="navbar-text navbar-right"><a href="index.php?p=login/logout">Desloguearse</a></p>
