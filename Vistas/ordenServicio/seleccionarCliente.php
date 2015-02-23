@@ -5,27 +5,7 @@
 		<!--<h3>Seleccionar Cliente</h3>-->
 
 
-		<?php 
-
-		$f=new form();
-
-
-		echo "<h4>Buscar Cliente</h4>";
-		$f->iniciarForm("POST","index.php?p=Cliente/Buscar","listarClientes");
 		
-		$f->group(10);	
-		$f->addLabel("Apellido y Nombre o Razon Social");
-		$f->addTextbox("nombre");
-		$f->endGroup();
-
-		$f->group(10);	
-		$f->addSubmit("Buscar");
-		$f->endGroup();
-
-		$f->finForm();
-
-
-		 ?>
 
 		 <table class='table table-striped'>
 		 	<tr>

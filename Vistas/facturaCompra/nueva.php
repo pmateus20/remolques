@@ -60,11 +60,12 @@
 			},
 			ptoVenta: {	
 				required:true,
-				minlength: 5
+				digits: true
+				
 			},
 			numero: {	
 				required:true,
-				minlength: 5,
+				
 				digits: true
 			}
 			

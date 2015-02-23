@@ -49,7 +49,11 @@
 
 	 </table>
 
-	 <?php } ?>
+	 <?php 
+
+	 echo "<a href='index.php?p=ordenServicio/finalizarOrden' class='btn btn-default'>Finalizar Orden de Servicio</a>";
+
+	 } ?>
 
 	<h4>Agregar Servicio</h4>
 
@@ -91,6 +95,7 @@
 
 	}
 
+	echo "<a href='index.php?p=ordenServicio/eliminar&id=$dato1' class='btn btn-default'>Cancelar </a>";
 
 
 

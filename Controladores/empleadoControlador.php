@@ -161,7 +161,7 @@ class empleadoControlador extends controlador{
 	function guardarPass(){
 		if(isset($_POST["Guardar"])){
 			if($_POST["password"]==$_POST["password2"]){
-			$this->setpassword(md5($_POST["password"]));
+			$this->setpassword(md5(strtoupper($_POST["password"])));
 			
 			$r=array(
 				"password"=>$this->getpassword(),

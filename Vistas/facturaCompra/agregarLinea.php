@@ -50,7 +50,7 @@
 
 		 <?php 
 
-		echo "<a href='index.php?p=facturaCompra/finalizarFacturaCompra&id=$dato1'>Finalizar Factura de Compra</a>";
+		echo "<a href='index.php?p=facturaCompra/finalizarFacturaCompra&id=$dato1' class='btn btn-default'>Finalizar Factura de Compra</a>";
 
 		}
 		 ?>
@@ -95,7 +95,7 @@
 
 		}
 
-
+		echo "<a href='index.php?p=facturaCompra/eliminar&id=$dato1' class='btn btn-default'>Cancelar </a>";
 
 
 

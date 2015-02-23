@@ -8,22 +8,22 @@
 
 	$f->iniciarForm("POST","index.php?p=factura/guardar","factura");
 	
-	$f->group(10);
+	$f->group(3);
 	$f->addLabel("Fecha");
 	$f->addTextbox("fecha",null,10);
 	$f->endGroup();
 
-	$f->group(10);
+	$f->group(2);
 	$f->addLabel("Tipo");
 	$f->addCombo("tipo",array("A"=>"A","B"=>"B"));
 	$f->endGroup();
 
-	$f->group(10);	
+	$f->group(3);	
 	$f->addLabel("Punto de Ventas");
 	$f->addTextbox("ptoVenta");
 	$f->endGroup();
 
-	$f->group(10);
+	$f->group(5);
 	$f->addLabel("Numero");
 	$f->addTextbox("numero");
 	$f->endGroup();
@@ -61,11 +61,10 @@
 			},
 			ptoVenta: {	
 				required:true,
-				minlength: 5
+				digits: true
 			},
 			numero: {	
 				required:true,
-				minlength: 5,
 				digits: true
 			}
 			
@@ -73,7 +72,7 @@
 		messages: {
 			fecha: "No ingres&oacute; la fecha o el caracter ingresado no es v&aacute;lido.",
 			
-			ptoVenta: "Por favor ingrese una descripci&oacute;n para el punto de venta.",
+			ptoVenta: "Por favor ingrese el punto de venta.",
 			numero: "Ingrese un n&uacute;mero v&aacute;lido para la factura."
 
 		}

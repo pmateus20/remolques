@@ -63,7 +63,7 @@
 
 	 <?php 
 
-	echo "<a href='index.php?p=reciboSueldo/finalizarReciboSueldo&id=$dato1'>Finalizar Recibo de Sueldo</a>";
+	echo "<a href='index.php?p=reciboSueldo/finalizarReciboSueldo&id=$dato1' class='btn btn-default'>Finalizar Recibo de Sueldo</a>";
 
 	}
 	 ?>
@@ -133,6 +133,8 @@
 			<?php	
 
 			}
+
+			echo "<a href='index.php?p=reciboSueldo/eliminar&id=$dato1' class='btn btn-default'>Cancelar </a>";
 
 			?>
 	</div>

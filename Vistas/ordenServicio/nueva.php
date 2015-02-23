@@ -11,7 +11,7 @@
 
 		$f->addHidden("cliente",$dato1);
 				
-		$f->group(10);	
+		$f->group(3);	
 		$f->addLabel("Fecha");
 		$f->addTextbox("fecha");
 		$f->endGroup();
@@ -21,7 +21,7 @@
 		$f->addTextbox("numeroServicioExterno");		
 		$f->endGroup();
 
-		$f->group(10);	
+		$f->group(6);	
 		$f->addLabel("Titular");
 		$f->addTextbox("titular");
 		$f->endGroup();
@@ -78,7 +78,7 @@
 			descripcion: {	
 				required:true,
 				minlength: 5
-			},	
+			}	
 		},
 		messages: {
 			fecha: "No ingres&oacute; la fecha o el caracter ingresado no es v&aacute;lido",

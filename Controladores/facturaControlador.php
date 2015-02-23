@@ -186,6 +186,8 @@ class facturaControlador extends controlador{
 			"codigo"=>$r["codigo"],
 			"numero"=>$r["numero"],
 			"cliente"=>$cli["nombre"],
+			"domicilio"=>$cli["domicilio"],
+			"cuit"=>$cli["cuit"],
 			"fecha"=>date("d/m/Y",strtotime($r["fecha"])),
 			"tipo"=>$r["tipo"],
 			"puntoVenta"=>$r["puntoVenta"],

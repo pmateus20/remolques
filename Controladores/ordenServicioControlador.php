@@ -207,7 +207,14 @@ class ordenServicioControlador extends controlador {
 	}
 
 
+	function finalizarOrden(){
+		
 
+		$this->seleccionarCliente();
+
+
+
+	}
 
 
 

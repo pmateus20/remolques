@@ -60,9 +60,10 @@
 					 				<li> <a href="index.php?p=facturaCompra/listar">Lista Facturas de Compra</a></li>
 								</ul>
 							</li>
+							<?php if($_SESSION["tipo"]=="admin"){ ?>
 							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">RRHH <span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<?php if($_SESSION["tipo"]=="admin"){ ?>
+									
 					 				<li> <a href="index.php?p=empleado/crear">Nuevo Empleado</a></li>
 					 				<li> <a href="index.php?p=empleado/listar">Listar Empleado</a></li>
 					 				<li class="divider"></li>
@@ -74,10 +75,10 @@
 					 				<li class="divider"></li>
 					 				<li> <a href="index.php?p=reciboSueldo/seleccionarEmpleado">Nuevo Recibo de Sueldo</a></li>
 					 				<li> <a href="index.php?p=reciboSueldo/listar">Listar Recibos de Sueldo</a></li>
-					 				<?php } ?>
+					 				
 								</ul>
 							</li>
-							
+							<?php } ?>
 						</ul>
 						
 						<p class="navbar-text navbar-right"><a href="index.php?p=login/logout">Desloguearse</a></p>
