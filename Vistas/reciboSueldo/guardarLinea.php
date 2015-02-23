@@ -11,7 +11,7 @@ echo ": ".$array["Descripcion"]."<br>";
 
 $tipo=explode("/", $array["Tipo"]);
 				
-$f->addLabel("Importe");
+
 			
 if(isset($tipo[1])){
 	if($tipo[1]=="S"){
