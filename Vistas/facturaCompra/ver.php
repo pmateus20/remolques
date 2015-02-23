@@ -1,4 +1,5 @@
 <?php $a=$array; ?>
+
 <div class="panel panel-info">
   <div class="panel-heading"><h4>Factura N&uacute;mero: <?php echo $a["numero"] ?> </h4></div>
   <div class="panel-body">

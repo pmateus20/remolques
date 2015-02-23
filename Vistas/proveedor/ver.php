@@ -1,7 +1,7 @@
 <?php $a=$array; ?>
 
 <div class="panel panel-info">
-  <div class="panel-heading"><h4>Cliente: <?php echo $a["nombre"] ?></h4></div>
+  <div class="panel-heading"><h4>Proveedor: <?php echo $a["nombre"] ?></h4></div>
   <div class="panel-body">
 
 	
