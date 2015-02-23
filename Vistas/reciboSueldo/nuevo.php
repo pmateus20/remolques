@@ -1,34 +1,43 @@
-<?php 
+<div class="panel panel-info">
+  <div class="panel-heading"><h4>Ingresar Periodo</h4></div>
+  <div class="panel-body">
 
-$f=new form();
+    <?php 
 
-$f->iniciarForm("POST","index.php?p=reciboSueldo/guardar","reciboSueldo");
+    $f=new form();
 
-$f->addLabel("Periodo");
-$f->addTextbox("fecha",null,null);
+    $f->iniciarForm("POST","index.php?p=reciboSueldo/guardar","reciboSueldo");
 
-
-$f->addHidden("empleado",$dato1);
-
-
-
-$f->addSubmit("Guardar");
-
-
-$f->finForm();
+    $f->group(10);  
+    $f->addLabel("Periodo");
+    $f->addTextbox("fecha",null,null);
+    $f->endGroup();
 
 
+    $f->addHidden("empleado",$dato1);
 
 
+    $f->group(10);  
+    $f->addSubmit("Guardar");
+    $f->endGroup();
 
-
-
-
+    $f->finForm();
 
 
 
 
- ?>
+
+
+
+
+
+
+
+
+
+     ?>
+   </div>
+</div>
 
 
  <script>
