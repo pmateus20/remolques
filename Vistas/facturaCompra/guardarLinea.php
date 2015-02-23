@@ -1,32 +1,41 @@
-<?php 
+<div class="panel panel-info">
+  <div class="panel-heading"><h4>Ingresar Cantidad y Precio</h4></div>
+  <div class="panel-body">
 
-$f=new form();
+		<?php 
 
-$f->iniciarForm("post","index.php?p=facturaCompra/guardarLinea","guardarLinea");
+		$f=new form();
 
-$f->addLabel("Articulo");
+		$f->iniciarForm("post","index.php?p=facturaCompra/guardarLinea","guardarLinea");
+		$f->group(10);
+		$f->addLabel("Articulo");
+		echo ": ".$array["Descripcion"]."<br>";
+		$f->endGroup();
 
-echo ": ".$array["Descripcion"]."<br>";
+		$f->group(10);
+		$f->addLabel("Cantidad");
+		$f->addTextbox("cantidad");
+		$f->endGroup();
 
-$f->addLabel("Cantidad");
-$f->addTextbox("cantidad");
+		$f->group(10);
+		$f->addLabel("Precio");
+		$f->addTextbox("precio");
+		$f->addHidden("idArticulo",$array["Codigo"]);
+		$f->addHidden("facturaCompra",$dato1);
+		$f->endGroup();
 
-
-$f->addLabel("Precio");
-$f->addTextbox("precio");
-
-$f->addHidden("idArticulo",$array["Codigo"]);
-$f->addHidden("facturaCompra",$dato1);
-
-
-$f->addSubmit("Guardar");
-
-
-
-$f->finForm();
-
-
-
+		$f->group(10);
+		$f->addSubmit("Guardar");
+		$f->endGroup();
 
 
- ?>
+		$f->finForm();
+
+
+
+
+
+		 ?>
+
+      </div>
+</div>

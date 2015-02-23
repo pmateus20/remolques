@@ -2,33 +2,43 @@
   <div class="panel-heading"><h4>Nueva Factura</h4></div>
   <div class="panel-body">
 
-<?php 
+	<?php 
 
-$f=new form();
+	$f=new form();
 
-$f->iniciarForm("POST","index.php?p=factura/guardar","factura");
+	$f->iniciarForm("POST","index.php?p=factura/guardar","factura");
+	
+	$f->group(10);
+	$f->addLabel("Fecha");
+	$f->addTextbox("fecha",null,10);
+	$f->endGroup();
+
+	$f->group(10);
+	$f->addLabel("Tipo");
+	$f->addCombo("tipo",array("A"=>"A","B"=>"B"));
+	$f->endGroup();
+
+	$f->group(10);	
+	$f->addLabel("Punto de Ventas");
+	$f->addTextbox("ptoVenta");
+	$f->endGroup();
+
+	$f->group(10);
+	$f->addLabel("Numero");
+	$f->addTextbox("numero");
+	$f->endGroup();
+
+	$f->addHidden("cliente",$dato1);
+
+	$f->group(10);
+	$f->addSubmit("Guardar");
+	$f->endGroup();
 
 
-$f->addLabel("Fecha");
-$f->addTextbox("fecha",null,10);
-$f->addLabel("Tipo");
-$f->addCombo("tipo",array("A"=>"A","B"=>"B"));
-$f->addLabel("Punto de Ventas");
-$f->addTextbox("ptoVenta");
-$f->addLabel("Numero");
-$f->addTextbox("numero");
-
-$f->addHidden("cliente",$dato1);
+	$f->finForm();
 
 
-
-$f->addSubmit("Guardar");
-
-
-$f->finForm();
-
-
- ?>
+	 ?>
 
   </div>
 </div>
