@@ -15,7 +15,7 @@ class detalleReciboSueldoControlador extends controlador{
 
 	function listarLineas($id){
 		$model=new detalleReciboSueldoModelo();
-		return $model->listardetalleReciboSueldo($id);
+		return $model->listarDetalleReciboSueldo($id);
 
 	}
 

@@ -29,7 +29,7 @@ class reciboSueldoControlador extends Controlador{
 			$e=new empleadoModelo();
 			$emp=$e->calcularSueldo($_POST["empleado"]);
 			$salario=$emp["salario"];
-
+		
 			$r=array(
 				"numeroReciboSueldo"=>"null",
 				"fecha"=>$this->getfecha(),
@@ -89,8 +89,8 @@ class reciboSueldoControlador extends Controlador{
 					
 
 				$e=$this->getempleado($f);
-				$emp=new reciboSueldoModelo();
-				$emp->getSalario($e);
+				$r=new reciboSueldoModelo();
+				$rec=$r->buscarReciboSueldo($f);
 								
 
 				require_once("Controladores/detalleReciboSueldoControlador.php");
@@ -98,7 +98,7 @@ class reciboSueldoControlador extends Controlador{
 				$reg=$this->DetalleReciboSueldo->buscarConceptoId($serv);
 				
 
-				$this->vista->render("reciboSueldo/guardarLinea",$reg,$emp,$f);
+				$this->vista->render("reciboSueldo/guardarLinea",$reg,$rec,null);
 			}
 		}
 	}
@@ -113,7 +113,7 @@ class reciboSueldoControlador extends Controlador{
 		$model=new reciboSueldoModelo();
 		$model->finalizarreciboSueldo($linea["total"],$id);
 
-		$this->seleccionarEmpleado();
+		$this->ver($id);
 
 
 
@@ -155,8 +155,12 @@ class reciboSueldoControlador extends Controlador{
 		$this->vista->render("reciboSueldo/listar",$array);
 	}
 
-	function ver(){
-		$id=$_GET["id"];
+	function ver($var=null){
+		if(isset($var)){
+			$id=$var;
+		}else{
+			$id=$_GET["id"];
+		}
 
 		$ls=$this->listarLineas($id);
 
@@ -165,14 +169,17 @@ class reciboSueldoControlador extends Controlador{
 
 		require_once("Controladores/empleadoControlador.php");
 		$this->empleado=new empleadoControlador();
-		$cli=$this->empleado->buscarEmpleado($r["empleado"]);
+		$emp=$this->empleado->buscarEmpleado($r["empleado"]);
 
 		
 
 		$f=array(
-			"numero"=>$r["codigo"],
-			"empleado"=>$cli["nombre"],
-			"fecha"=>date("d/m/Y",strtotime($r["fecha"])),
+			"empleado"=>$emp["nombre"],
+			"legajo"=>$emp["codigo"],
+			"cuil"=>$emp["cuil"],
+			"fechaIng"=>date("d/m/Y",strtotime($emp["fechaIngreso"])),
+			"salario"=>$emp["sueldo"],
+			"periodo"=>date("m/Y",strtotime($r["fecha"])),
 			"importe"=>$r["importe"]
 			);
 
@@ -198,6 +205,35 @@ class reciboSueldoControlador extends Controlador{
 		$this->listar();
 
 
+	}
+
+	function imprimir(){
+		$recibo=$_GET["id"];
+
+		$ls=$this->listarLineas($recibo);
+
+		$model=new reciboSueldoModelo();
+		$r=$model->buscarreciboSueldo($recibo);
+
+		require_once("Controladores/empleadoControlador.php");
+		$this->empleado=new empleadoControlador();
+		$emp=$this->empleado->buscarEmpleado($r["empleado"]);
+
+		
+
+		$reciboS=array(
+			"empleado"=>$emp["nombre"],
+			"legajo"=>$emp["codigo"],
+			"cuil"=>$emp["cuil"],
+			"fechaIng"=>date("d/m/Y",strtotime($emp["fechaIngreso"])),
+			"salario"=>$emp["sueldo"],
+			"periodo"=>date("m/Y",strtotime($r["fecha"])),
+			"importe"=>$r["importe"]
+			);
+
+
+
+		$this->vista->render("reciboSueldo/reciboImprimir",$reciboS,$ls);
 	}
 
 

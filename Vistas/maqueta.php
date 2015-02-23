@@ -66,6 +66,7 @@
 					 				<li> <a href="index.php?p=concepto/listar">Listar Concepto</a></li>
 					 				<li> <a href="index.php?p=reciboSueldo/seleccionarEmpleado">Nuevo Recibo de Sueldo</a></li>
 					 				<li> <a href="index.php?p=reciboSueldo/listar">Listar Recibos de Sueldo</a></li>
+					 				<li> <a href="index.php?p=reciboSueldo/imprimir">Imprimir Recibos de Sueldo</a></li>
 									<?php } ?>
 								</ul>
 							</li>

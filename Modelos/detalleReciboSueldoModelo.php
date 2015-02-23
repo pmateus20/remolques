@@ -43,7 +43,8 @@ class detalleReciboSueldoModelo extends modelo{
 		if (mysql_num_rows($result)>0){
 			$total=0;
 			while($linea=mysql_fetch_array($result)){
-				if($linea["tipo"]=="D"){
+				$t=explode("/", $linea["tipo"]);
+				if($t[0]=="D"){
 					$total=$total+($linea["importe"]);	
 				}else{
 					$total=$total-($linea["importe"]);	

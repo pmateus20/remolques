@@ -16,6 +16,7 @@ class vista {
 		include $this->getMaqueta();
 
 	}
+	
 }
 
  

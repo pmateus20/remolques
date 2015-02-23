@@ -9,38 +9,35 @@ $f->addLabel("Concepto");
 echo ": ".$array["Descripcion"]."<br>";
 
 
-$tipo=explode("/", $fila["Tipo"]);
+$tipo=explode("/", $array["Tipo"]);
 				
 $f->addLabel("Importe");
 			
 if(isset($tipo[1])){
-	if($tipo[1]=="S"){$f->addTextbox("precio",$array2["salario"]);};
-	if($tipo[1]=="P"){};
-	if($tipo[1]=="D"){echo " Valor Definido";};
+	if($tipo[1]=="S"){
+		echo "<strong>Tipo:</strong>Sueldo<br>";
+		$f->addLabel("Importe");
+		$f->addTextbox("precio",$array2["salario"]);
+	};
+	if($tipo[1]=="P"){
+		echo "<strong>Tipo:</strong>Porcentual<br>";
+		echo "<strong>Porcentaje:</strong>".$tipo[2]."%<br>";
+		$f->addLabel("Importe");
+		$imp=($array2["salario"]*$tipo[2])/100;
+		$f->addTextbox("precio",$imp);
+	};
+	if($tipo[1]=="D"){
+		echo "<strong>Tipo:</strong>Valor Definido<br>";
+		echo "<strong>Valor Predefinido:</strong>$".$tipo[2]."<br>";
+		$f->addLabel("Importe");
+		$f->addTextbox("precio",$tipo[2]);
+	};
 					
 }
 			
 				
-if(isset($tipo[2])){
-	if($tipo[1]=="P"){echo " ".$tipo[2]."%";};
-	if($tipo[1]=="D"){echo " $".$tipo[2];}
-}	
-
-
-
-
-
-
-
-
-
-
-
-
-$f->addTextbox("precio");
-
 $f->addHidden("codConcepto",$array["Codigo"]);
-$f->addHidden("reciboSueldo",$dato1);
+$f->addHidden("reciboSueldo",$array2["codigo"]);
 
 
 $f->addSubmit("Guardar");

@@ -54,7 +54,8 @@ class reciboSueldoModelo extends modelo{
 					"codigo"=>$linea["numeroReciboSueldo"],
 					"fecha"=>$linea["fecha"],
 					"empleado"=>$linea["FK_legajo"],
-					"importe"=>$linea["importe"]
+					"importe"=>$linea["importe"],
+					"salario"=>$linea["sueldo"]
 					);
 			}
 

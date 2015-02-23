@@ -41,7 +41,7 @@ class empleadoModelo extends modelo{
 
 	function buscarEmpleado($id){
 		$this->conectar();
-		$result=$this->consulta("Empleado","where legajo = $id");
+		$result=$this->consulta("Empleado","where legajo = $id","Categoria","FK_codCategoria","codCategoria");
 			
 			while($linea=mysql_fetch_array($result)){
 				$reg=array(
@@ -52,7 +52,8 @@ class empleadoModelo extends modelo{
 					"fechaNacimiento"=>$linea["fechaNacimiento"],
 					"fechaIngreso"=>$linea["fechaIngreso"],
 					"telefono"=>$linea["telefono"],
-					"categoria"=>$linea["FK_codCategoria"]
+					"categoria"=>$linea["FK_codCategoria"],
+					"sueldo"=>$linea["salario"]
 					);
 			}
 
@@ -92,7 +93,7 @@ class empleadoModelo extends modelo{
 
 	function calcularSueldo($id){
 		$this->conectar();
-		$result=$this->consulta("Empleado","where usuario = '$id'","Categoria","FK_codCategoria","codCategoria");
+		$result=$this->consulta("Empleado","where legajo = '$id'","Categoria","FK_codCategoria","codCategoria");
 			if(mysql_num_rows($result)>0){
 
 				while($linea=mysql_fetch_array($result)){
