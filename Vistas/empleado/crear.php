@@ -76,13 +76,13 @@
 				minlength: 5
 			},
 			fechaNacimiento: {
-				required:true,
+				required:true
 			},
 			fechaIngreso: {
-				required:true,
+				required:true
 			},
 			codCategoria: {
-				required:true,
+				required:true
 			}
 		},
 		messages: {
@@ -95,4 +95,6 @@
 		}
 	});
 
+	$("#fechaNacimiento").datepicker();
+	$("#fechaIngreso").datepicker();
 </script>

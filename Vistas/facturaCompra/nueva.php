@@ -50,3 +50,32 @@
 <script>
 	$("#fecha").datepicker();
 </script>
+
+<script type="text/javascript">
+	$( "#facturaCompra" ).validate({
+		rules: {
+			fecha: {	
+				required:true,
+				
+			},
+			ptoVenta: {	
+				required:true,
+				minlength: 5
+			},
+			numero: {	
+				required:true,
+				minlength: 5,
+				digits: true
+			}
+			
+		},
+		messages: {
+			fecha: "No ingres&oacute; la fecha o el caracter ingresado no es v&aacute;lido.",
+			
+			ptoVenta: "Por favor ingrese una descripci&oacute;n para el punto de venta.",
+			numero: "Ingrese un n&uacute;mero v&aacute;lido para la factura."
+
+		}
+	});
+
+</script>
