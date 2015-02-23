@@ -19,7 +19,16 @@ class conceptoControlador extends controlador{
 	function guardar(){
 		if(isset($_POST["Guardar"])){
 			$this->setdescripcion($_POST["descripcion"]);
-			$this->settipo($_POST["tipo"]);
+			if($_POST["subtipo"]=="S"){
+				$tipo=$_POST["tipo"]."/".$_POST["subtipo"];
+			}else{
+				if($_POST["subtipo"]=="P"){
+					$tipo=$_POST["tipo"]."/".$_POST["subtipo"]."/".$_POST["adicional1"];	
+				}else{
+					$tipo=$_POST["tipo"]."/".$_POST["subtipo"]."/".$_POST["adicional2"];
+				}
+			}
+			$this->settipo($tipo);
 
 
 			$r=array(

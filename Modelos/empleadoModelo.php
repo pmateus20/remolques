@@ -90,6 +90,30 @@ class empleadoModelo extends modelo{
 		
 	}
 
+	function calcularSueldo($id){
+		$this->conectar();
+		$result=$this->consulta("Empleado","where usuario = '$id'","Categoria","FK_codCategoria","codCategoria");
+			if(mysql_num_rows($result)>0){
+
+				while($linea=mysql_fetch_array($result)){
+					$reg=array(
+						"codigo"=>$linea["legajo"],
+						"nombre"=>$linea["apellidoNombre"],
+						"usuario"=>$linea["usuario"],
+						"password"=>$linea["password"],
+						"tipoUsuario"=>$linea["tipoUsuario"],
+						"salario"=>$linea["salario"]
+						
+						);
+				}
+
+				return $reg;
+
+			}else{
+				return null;
+			}
+	}
+
 	
 
 

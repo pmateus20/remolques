@@ -26,11 +26,15 @@ class reciboSueldoControlador extends Controlador{
 		if(isset($_POST["Guardar"])){
 			$this->setfecha(date("Y-m-d",strtotime(str_replace("/","-", $_POST["fecha"]))));
 			
+			$e=new empleadoModelo();
+			$emp=$e->calcularSueldo($_POST["empleado"]);
+			$salario=$emp["salario"];
 
 			$r=array(
 				"numeroReciboSueldo"=>"null",
 				"fecha"=>$this->getfecha(),
 				"FK_legajo"=>$_POST["empleado"],
+				"sueldo"=>$salario
 				);
 						
 			$model=new reciboSueldoModelo();
@@ -84,7 +88,9 @@ class reciboSueldoControlador extends Controlador{
 				$f=$_GET["f"];
 					
 
-				$cli=$this->getempleado($f);
+				$e=$this->getempleado($f);
+				$emp=new reciboSueldoModelo();
+				$emp->getSalario($e);
 								
 
 				require_once("Controladores/detalleReciboSueldoControlador.php");
@@ -92,7 +98,7 @@ class reciboSueldoControlador extends Controlador{
 				$reg=$this->DetalleReciboSueldo->buscarConceptoId($serv);
 				
 
-				$this->vista->render("reciboSueldo/guardarLinea",$reg,null,$f);
+				$this->vista->render("reciboSueldo/guardarLinea",$reg,$emp,$f);
 			}
 		}
 	}

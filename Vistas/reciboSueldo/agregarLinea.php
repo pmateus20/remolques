@@ -54,7 +54,7 @@ echo "<a href='index.php?p=reciboSueldo/finalizarReciboSueldo&id=$dato1'>Finaliz
 }
  ?>
 
-<h3>Agregar Servicio</h3>
+<h3>Agregar Concepto</h3>
 
 <?php
 

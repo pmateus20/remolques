@@ -77,7 +77,15 @@ class reciboSueldoModelo extends modelo{
 		$this->update("ReciboSueldo","where numeroReciboSueldo=$f");
 	}
 
-	
+	function getSalario($id){
+		$reg=$this->buscarReciboSueldo($id);
+
+		$e=new empleadoModelo();
+		$emp=$e->calcularSueldo($reg["empleado"]);
+		$salario=$emp["salario"];
+		return $salario;
+
+	}
 
 
 }
